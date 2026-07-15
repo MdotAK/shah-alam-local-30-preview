@@ -25,3 +25,9 @@ Open `http://localhost:4173`. Each concept has its own stable query URL, for exa
 Checked 15 July 2026. “No website” means no independent business-owned domain was discoverable through a business-name + Shah Alam search. Facebook, Instagram, Waze, Google Maps, delivery platforms and directory profiles are treated as third-party presences, not independent websites. This is indicative research and must be rechecked before outreach or publication.
 
 All concept sites are marked unofficial. Public contact details are included only to demonstrate useful calls to action, are labelled as research-sourced in the interface, and must be confirmed with each owner. No concept is outreach-ready until its facts, contact channel and photography have passed owner confirmation and QA.
+
+## Payton QA and draft outreach
+
+`npm run qa` runs the 30 concepts at desktop and mobile viewport sizes, checks contact routing, provenance, accessibility and overflow, and writes evidence to `qa-artifacts/`. GitHub Actions runs the same gate on every pull request and every push to `main`.
+
+`npm run outreach:drafts` creates 30 individualized draft-only prospect briefs in `data/`. These files have no sending capability, keep `externalSendingEnabled` false, and require founder approval before any external action.
