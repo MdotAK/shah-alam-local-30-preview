@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research-backed directory of 30 Shah Alam businesses without a discoverable independent website, with tailored concept sites.">
+  <title>Local 30 — Shah Alam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="directory-page">
+  <header class="directory-hero">
+    <nav class="directory-nav"><a class="directory-mark" href="./">LOCAL / 30</a><span>Shah Alam, Selangor · researched 15 Jul 2026</span></nav>
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">A local digital opportunity index</p>
+        <h1>Thirty good businesses.<br><em>Thirty missing front doors.</em></h1>
+      </div>
+      <div class="hero-note">
+        <p>Each business below had no discoverable independent domain in a name + location search. Social profiles and directory pages were not counted as websites.</p>
+        <p class="small">Research is indicative, not absolute. Business details and opening hours must be confirmed with each owner before publication.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="directory-tools" aria-label="Directory filters">
+      <div class="count"><strong id="visibleCount">30</strong><span>concept sites</span></div>
+      <label class="search"><span>Search</span><input id="searchInput" type="search" placeholder="Name, area or service…"></label>
+      <div id="filters" class="filters" aria-label="Filter by industry"></div>
+    </section>
+    <section id="listing" class="listing" aria-live="polite"></section>
+  </main>
+
+  <footer class="directory-footer">
+    <p>Independent research and speculative design work. Not affiliated with the listed businesses.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
