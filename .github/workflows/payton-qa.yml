@@ -1,0 +1,33 @@
+name: Payton QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - run: npm run outreach:drafts
+      - run: npm run qa
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: payton-qa-report
+          path: qa-artifacts/
+          retention-days: 30
+

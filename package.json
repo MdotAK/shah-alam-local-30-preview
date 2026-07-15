@@ -4,6 +4,12 @@
   "private": true,
   "scripts": {
     "start": "python3 -m http.server 4173",
-    "build": "rm -rf dist && mkdir -p dist/server dist/client/assets && cp index.html site.html dist/client/ && cp -R assets/. dist/client/assets/ && cp worker/index.js dist/server/index.js"
+    "build": "rm -rf dist && mkdir -p dist/server dist/client/assets && cp index.html site.html dist/client/ && cp -R assets/. dist/client/assets/ && cp worker/index.js dist/server/index.js",
+    "qa": "node scripts/qa-sites.mjs",
+    "outreach:drafts": "node scripts/generate-outreach.mjs",
+    "verify": "npm run build && npm run outreach:drafts && npm run qa"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
   }
 }

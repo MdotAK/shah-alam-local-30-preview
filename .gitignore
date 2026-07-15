@@ -1,4 +1,5 @@
-.DS_Store
+node_modules/
+.npm-cache/
+.playwright-browsers/
 dist/
-*.zip
-*.tar.gz
+qa-artifacts/screenshots/
